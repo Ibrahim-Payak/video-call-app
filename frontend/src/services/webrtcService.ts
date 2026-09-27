@@ -1,6 +1,8 @@
 import type { SignalingMessage } from '../types/signal';
+import { config } from '../config';
 
-const DEFAULT_STUN = 'stun:stun.l.google.com:19302';
+// const DEFAULT_STUN = 'stun:stun.l.google.com:19302';
+const DEFAULT_STUN = config.stunServer;
 
 export interface WebRTCServiceOptions {
   /** Sends a signaling message to the remote peer via WebSocket */
@@ -100,7 +102,8 @@ export class WebRTCService {
       await videoSender.replaceTrack(newTrack);
     } else {
       // Edge case: no video was negotiated — fall back to addTrack (rare with camera on)
-      this.pc.addTrack(newTrack, thisStream ?? new MediaStream());
+      const stream = new MediaStream([newTrack]);
+      this.pc.addTrack(newTrack, stream);
     }
   }
 

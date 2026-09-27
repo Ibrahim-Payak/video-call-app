@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useWebRTC } from '../hooks/useWebRTC';
 import  DevicePreview from '../components/DevicePreview';
-import VideoTile from '../components/VideoTile';
+import {VideoTile} from '../components/VideoTile';
 
 interface CallRoomProps {
   roomCode: string;

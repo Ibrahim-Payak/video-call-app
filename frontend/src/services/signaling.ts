@@ -1,8 +1,10 @@
 import { Client, type StompSubscription, type IMessage } from '@stomp/stompjs';
 import SockJS from 'sockjs-client';
 import type { SignalingMessage } from '../types/signal';
+import { config } from '../config';
 
-const WS_URL = 'http://localhost:8080/ws';
+// const WS_URL = 'http://localhost:8080/ws';
+const WS_URL = config.wsUrl;
 
 export type WsStatus = 'disconnected' | 'connecting' | 'connected' | 'reconnecting';
 
