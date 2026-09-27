@@ -1,0 +1,40 @@
+.call-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(20, 20, 35, 0.9);
+    border-radius: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .control-btn {
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+  }
+  
+  .control-btn:hover { transform: scale(1.08); }
+  
+  .control-on   { background: #3a3a55; color: #fff; }
+  .control-off  { background: #d9534f; color: #fff; }
+  .control-active { background: #f0ad4e; color: #222; }
+  
+  /* Leave is visually distinct: pill-shaped, red, wider */
+  .control-leave {
+    width: auto;
+    padding: 0 22px;
+    border-radius: 26px;
+    background: #e53935;
+    color: #fff;
+    font-weight: 600;
+  }
+  .control-leave:hover { background: #c62828; }
+  

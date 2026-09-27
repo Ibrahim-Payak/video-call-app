@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #1e1e2f;
+    color: #f0f0f5;
+    min-height: 100vh;
+  }
+  
+  .page-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 16px;
+  }
+  
+  .card {
+    background: #2b2b40;
+    border-radius: 12px;
+    padding: 32px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    text-align: center;
+  }
+  
+  .card h1 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+  
+  .card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+  }
+  
+  .card label {
+    font-size: 0.9rem;
+    color: #b0b0c8;
+  }
+  
+  input {
+    background: #1e1e2f;
+    border: 1px solid #3d3d58;
+    border-radius: 8px;
+    padding: 12px;
+    color: #f0f0f5;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  input:focus {
+    border-color: #6c63ff;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .btn-primary {
+    background: #6c63ff;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: #5a52e0;
+  }
+  
+  .btn-secondary {
+    background: #3d3d58;
+    color: #f0f0f5;
+  }
+  
+  .btn-secondary:hover {
+    background: #4a4a6a;
+  }
+  
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  
+  .btn-link {
+    background: none;
+    border: none;
+    color: #6c63ff;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    text-decoration: underline;
+  }
+  
+  .error {
+    color: #ff6b6b;
+    font-size: 0.85rem;
+  }
+  
+
+  .preview-card {
+    max-width: 560px;
+  }
+  
+  .preview-video {
+    width: 100%;
+    border-radius: 8px;
+    background: #1e1e2f;
+    aspect-ratio: 4 / 3;
+    margin-bottom: 16px;
+  }
+
+  .preview-video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #1e1e2f;
+    margin-bottom: 8px;
+  }
+  
+  .preview-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .preview-video-off {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8a8aa8;
+    font-size: 0.95rem;
+  }
+  
+  .preview-video-off.error-bg {
+    color: #ff6b6b;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .preview-name {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  
+  .preview-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .toggle-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font: 95rem;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .toggle-on {
+    background: #3d3d58;
+    color: #f0f0f5;
+  }
+  
+  .toggle-on:hover {
+    background: #4a4a6a;
+  }
+  
+  .toggle-off {
+    background: #6c2f3f;
+    color: #ffb3c0;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 1100px;
+  }
+  
+  .video-tile {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1e1e2f;
+  }
+  
+  .video-tile-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .video-tile-name {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+  }
+  
+
+  .tile-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8a8aa8;
+    background: rgba(0, 0, 0, 0.35);
+  }
+  
+  
+  
